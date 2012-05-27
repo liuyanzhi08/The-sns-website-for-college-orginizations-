@@ -1,0 +1,65 @@
+/*This is the css for the index html*/
+
+a, a:hover{
+  text-decoration:none;
+  color:#77979C
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+.activity_container{
+  width:700px;
+  border:1px solid #CCC;
+  padding:10px;
+  float:left;
+}
+
+.activity{
+  border:1px solid #CCC;
+  padding:3px 16px;
+  margin:2px;
+}
+
+.activity_legend{
+  padding:5px;
+  margin:0;
+  border:none;
+  line-height:35px;
+  font-size:14px;
+}
+
+.activity_legend img{
+  float:left;
+}
+
+.society_container{
+  width:200px;
+  border:1px solid #CCC;
+  padding:10px;
+  position:fixed;
+  left:900px;
+}
+
+.clear{
+  clear:both;
+}
+
+.pagination li{
+  list-style:none;
+  display:block;
+  float:left;
+  border:1px solid #CCC;
+  padding:10px;
+  margin-right:3px;
+}
+
+.pagination li a{
+  text-decoration:none;
+  color:#000;
+}
+
+.pagination li a:hover{
+  text-decoration:underline;
+}

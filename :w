@@ -1,0 +1,79 @@
+<fieldset>
+<legend>基本信息</legend>
+<table>
+  <tr>
+    <th>名称</th>
+    <th>介绍</th>
+  </tr>
+  <tr>
+    <td><%= @society.name %></td>
+    <td><%= @society.description %></td>
+  </tr>
+</table>
+</fieldset>
+</br>
+
+<fieldset>
+<legend>我们的成员</legend>
+    <table>
+      <tr>
+        <th>头像</th>
+        <th>姓名</th>
+        <th>电话</th>
+        <th>邮件</th>
+        <th>微博</th>
+        <th>介绍</th>
+      </tr>
+      <% @society.users.each do |user| %>
+      <tr>
+        <td><%= image_tag user.avatar.url(:thumb) %>
+        <td><%= user.name %></td>
+        <td><%= user.telephone %></td>
+        <td><%= user.email %></td>
+        <td><%= user.miroblogging %></td>
+        <td><%= user.description %></td>
+      </tr>
+      <hr />
+      <% end %>
+    </table>
+</fieldset>
+</br>
+
+<fieldset>
+<legend>我们的物品</legend>
+    <table>
+      <tr>
+        <th>名称</th>
+        <th>价格</th>
+        <th>介绍</th>
+      </tr>
+      <% @society.properties.each do |property| %>
+      <tr>
+        <td><%= property.name %></td>
+        <td><%= property.price %></td>
+        <td><%= property.description %></td>
+      </tr>
+      <% end %>
+    </table>
+</fieldset>
+</br>
+
+<fieldset>
+<legend>发布的活动</legend>
+    <table>
+      <tr>
+        <th>名称</th>
+        <th>发布时间</th>
+        <th>内容</th>
+      </tr>
+      <% @society.activities.each do |activity| %>
+      <tr>
+        <td><%= activity.name %></td>
+        <td><%= activity.created_at %></td>
+        <td><%= activity.content %></td>
+      </tr>
+      <% end %>
+    </table>
+</fieldset>
+</br>
+

@@ -1,0 +1,9 @@
+<% if validates_notice.errors.any? %>
+  <div class="notice">
+  <ul>
+  <% validates_notice.errors.full_messages.each do |msg| %>
+    <li><%= msg.split[1] %></li>
+  <% end %>
+  </ul>
+</div>
+<% end %>

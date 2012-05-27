@@ -1,0 +1,97 @@
+/*global*/
+*{
+}
+
+input{
+  border:1px solid #CCC;
+  padding:5px;
+}
+
+tr td{
+  padding:5px;
+  border:0px solid #CCC;
+}
+
+tr {
+  color:#000;
+}
+
+th {
+  font-weight:lighter;
+}
+
+body{
+  width:1000px;
+  margin:0 auto;
+  border:1px solid #CCC;
+}
+
+fieldset{
+  border:3px double #CCC;
+  padding:4px;
+}
+
+fieldset table th{
+  color:#000;
+}
+
+legend{
+  font-size:12px;
+  color:#494949;
+  border:1px solid #CCC;
+  display:block;
+  padding:3px 10px;
+}
+/*end of global*/
+
+/*This is the head*/
+.nav{
+  height:50px;
+  color:#FFF;
+  background:#a72336;
+  padding:0 20px 0 20px;
+  line-height:50px;
+  font:thin;
+}
+
+.nav a{
+  color:#FFF;
+  text-decoration:none;
+}
+
+.nav a:hover{
+  text-decoration:underline;
+}
+
+#nav_account{
+  float:right;
+}
+/*end of the head*/
+
+/*the notice*/
+.notice{
+  background-color:#FAFFBD;
+  width:500px;
+  padding:5px;
+  margin:0 auto;
+  border:1px solid #b2914d;
+  text-align:center;
+}
+
+.field_with_errors input{
+  border:1px solid #F00;
+}
+/*end of the notice*/
+
+.container{
+  background:#FFF;
+  padding:20px;
+  font-size:14px;
+}
+
+.footbar{
+  text-align:center;
+  padding-bottom:20px;
+}
+
+

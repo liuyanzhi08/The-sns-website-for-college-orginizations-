@@ -1,0 +1,27 @@
+<div class="activity_container">
+  <% @new_activities.each do |activity| %>
+      <div class="activity">
+        <p>活动名称：<%= activity.name %></p>
+        <p>活动内容：<%= activity.content %></p>
+        <p>发布时间：<%= activity.created_at %></p>
+        <p>发布社团：<%= image_tag activity.society.avatar.url(:thumb) %>  <%= activity.society.name %></p>
+      </div>
+  <%= will_paginate @new_activities %>
+  <% end %>
+</div>
+
+<div class="society_container">
+  <p>亲爱的“<%= @society.name %>”，您好</p>
+  <p><%= image_tag @society.avatar.url(:medium) %></p>
+  <p>“<%= @society.users.size %>”个成员</p>
+  <p>“<%= @society.properties.size %>”样物品</p>
+  <p>“<%= @society.activities.size %>”个活动</p>
+  <%= button_to "发布活动", new_activity_path, :method => :get %>
+  <%= button_to "添加成员", new_user_path, :method => :get %>
+  <%= button_to "添加物品", new_property_path, :method => :get %>
+  <%= button_to "资料管理", modifyZone_url %>
+
+  <p><%= @society.description %>
+</div>
+
+<div class="clear"></div>

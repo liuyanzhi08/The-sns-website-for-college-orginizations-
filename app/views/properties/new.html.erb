@@ -1,0 +1,24 @@
+<%= render '/shared/validates_notice', :validates_notice => @property %>
+<fieldset>
+<legend>请输入物品信息</legend>
+<%= form_for(@property) do |form|  %>
+<p>
+  <%= form.label "名称"  %>
+  <%= form.text_field :name %>
+</p>
+
+<p>
+  <%= form.label "价格"  %>
+  <%= form.text_field :price %>
+</p>
+
+<p>
+  <%= form.label "介绍"%>
+  <%= form.text_field :description %>
+</p>
+
+<p>
+  <%= submit_tag("添加物品") %>
+</p>
+<% end %>
+</fieldset>

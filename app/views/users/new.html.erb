@@ -1,0 +1,38 @@
+<%= render '/shared/validates_notice', :validates_notice => @user %>
+<fieldset>
+<legend>请输入成员信息</legend>
+<%= form_for @user, :html => { :multipart => true } do |form|  %>
+<p>
+  <%= form.label "姓名"  %>
+  <%= form.text_field :name %>
+</p>
+
+<p>
+  <%= form.label "电话"  %>
+  <%= form.text_field :telephone %>
+</p>
+
+<p>
+  <%= form.label "邮件"  %>
+  <%= form.text_field :email %>
+</p>
+
+<p>
+  <%= form.label "微博"  %>
+  <%= form.text_field :miroblogging %>
+</p>
+
+<p>
+  <%= form.label "介绍"%>
+  <%= form.text_field :description %>
+</p>
+
+<p>
+<%= form.label "头像" %>
+  <%= form.file_field :avatar %>
+</p>
+
+<p>
+  <%= submit_tag("添加成员") %>
+</p>
+<% end %>

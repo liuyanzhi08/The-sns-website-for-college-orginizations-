@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Orgnization</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag     "custum", :media => "all" %>
+  <%= csrf_meta_tags %>
+  <%= favicon_link_tag '/myfavicon.ico'%>
+</head>
+<body>
+  <div class="nav">
+    <%= link_to "主页", root_path %>
+    <div id="nav_account">
+      <%= link_to "发布活动", new_activity_path %> |
+      <%= link_to "管理中心", modifyZone_url %> |
+      <%= link_to "zone", ourZone_url %> |
+      <%= link_to "注销", logout_url, :method => :delete %>
+    </div>
+  </div>
+  <div class="container">
+    <% if flash[:notice] %>
+      <div class="notice">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+    <%= yield %>
+  </div>
+</body>
+</html>

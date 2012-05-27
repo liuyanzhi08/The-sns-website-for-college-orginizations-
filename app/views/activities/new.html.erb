@@ -1,0 +1,19 @@
+<%= render '/shared/validates_notice', :validates_notice => @activity %>
+<fieldset>
+<legend>请输入活动信息</legend>
+<%= form_for(@activity) do |form|  %>
+<p>
+  <%= form.label "名称"  %>
+  <%= form.text_field :name %>
+</p>
+
+<p>
+  <%= form.label "内容"  %>
+  <%= form.text_field :content %>
+</p>
+
+<p>
+  <%= submit_tag("添加活动") %>
+</p>
+<% end %>
+</fieldset>

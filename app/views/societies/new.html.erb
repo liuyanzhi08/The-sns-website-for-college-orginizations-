@@ -1,0 +1,39 @@
+<%= render '/shared/validates_notice',
+  :validates_notice => @society
+%>
+<fieldset>
+<legend>请输入社团信息</legend>
+<div>
+  <%= form_for @society, :html => { :multipart => true }  do |form|  %>
+<p>
+  <%= form.label "名称" %>
+  <%= form.text_field :name %>
+</p>
+
+<p>
+  <%= form.label "介绍"%>
+  <%= form.text_field :description %>
+</p>
+
+<p>
+  <%= form.label "密码"  %>
+  <%= form.password_field :password %>
+</p>
+
+<p>
+  <%= form.label "密码确认" %>
+  <%= form.password_field :password_confirmation %>
+</P>
+
+<p>
+  <%= form.label "头像" %>
+  <%= form.file_field :avatar %>
+</p>
+
+
+<p>
+  <%= submit_tag("添加社团") %>
+</p>
+<% end %>
+</div>
+</fieldset>
