@@ -16,11 +16,11 @@
 </div>
 
 <div class="society_container">
-  <p>亲爱的“<%=link_to @society.name, zone_url(session[:society_id]) %>”，您好</p>
+  <p>亲爱的<%=link_to @society.name, zone_url(session[:society_id]) %>，您好</p>
   <p><%=link_to (image_tag @society.avatar.url(:medium)), zone_url(session[:society_id]) %></p>
-  <p>“<%= link_to @society.users.size, zone_url(session[:society_id]) %>”个成员</p>
-  <p>“<%= link_to @society.properties.size, zone_url(session[:society_id]) %>”样物品</p>
-  <p>“<%= link_to @society.activities.size, zone_url(session[:society_id]) %>”个活动</p>
+  <p><%= link_to @society.users.size, zone_url(session[:society_id]) %>个成员</p>
+  <p><%= link_to @society.properties.size, zone_url(session[:society_id]) %>样物品</p>
+  <p><%= link_to @society.activities.size, zone_url(session[:society_id]) %>个活动</p>
   <%= button_to "发布活动", new_activity_path, :method => :get %>
   <%= button_to "添加成员", new_user_path, :method => :get %>
   <%= button_to "添加物品", new_property_path, :method => :get %>
