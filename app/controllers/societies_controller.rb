@@ -10,7 +10,7 @@ class SocietiesController < ApplicationController
       session[:society_id] = @society.id
       redirect_to modifyZone_url, notice:"社团“#{@society.name}”今天从我们网站诞生了！"
     else
-      redirect_to new_society_path
+      render new_society_path
     end
   end
 
