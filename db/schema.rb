@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120523085536) do
+ActiveRecord::Schema.define(:version => 20120529042132) do
 
   create_table "activities", :force => true do |t|
     t.string   "name"
@@ -22,13 +22,43 @@ ActiveRecord::Schema.define(:version => 20120523085536) do
     t.integer  "society_id"
   end
 
-# Could not dump table "properties" because of following StandardError
-#   Unknown type 'Fixnum' for column 'society_id'
+  create_table "properties", :force => true do |t|
+    t.string   "name"
+    t.string   "price"
+    t.string   "description"
+    t.integer  "society_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
-# Could not dump table "societies" because of following StandardError
-#   Unknown type 'Fixnum' for column 'properties_id'
+  create_table "societies", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "description"
+    t.integer  "properties_id"
+    t.integer  "users_id"
+    t.integer  "activities_id"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.string   "password_digest"
+  end
 
-# Could not dump table "users" because of following StandardError
-#   Unknown type 'Fixnum' for column 'society_id'
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "telephone"
+    t.string   "email"
+    t.string   "microblogging"
+    t.string   "description"
+    t.integer  "society_id"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+  end
 
 end

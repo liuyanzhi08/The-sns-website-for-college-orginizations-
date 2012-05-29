@@ -1,0 +1,9 @@
+class RemovePasswordFromSociety < ActiveRecord::Migration
+  def up
+    remove_column :societies, :password
+      end
+
+  def down
+    add_column :societies, :password, :string
+  end
+end
