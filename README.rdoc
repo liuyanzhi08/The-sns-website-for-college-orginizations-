@@ -1,6 +1,3 @@
 == Welcome 
 This is the app I am wrting for the URP. Project. A SNS website for college orgnizations .
-Currently, finished 
-login
-logout
-creating user, editting profie, avatar function, release activites function; Paging function.
+Currently,I've finished the follow functions: login,logout,creating users, editing profile,uploading and showing avatar, releasing activites,Paging.
