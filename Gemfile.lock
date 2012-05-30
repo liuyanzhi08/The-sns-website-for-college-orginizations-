@@ -96,6 +96,7 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (>= 0.0.2)
       mime-types
+    pg (0.13.2)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -185,6 +186,7 @@ DEPENDENCIES
   jquery-rails (~> 2.0.0)
   libnotify (= 0.5.9)
   paperclip (~> 3.0)
+  pg
   rails (= 3.2.1)
   rb-inotify (= 0.8.8)
   rspec-rails (= 2.8.1)
