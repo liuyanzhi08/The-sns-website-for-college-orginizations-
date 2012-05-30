@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :name
       t.string :telephone
       t.string :email
-      t.string :miroblogging
+      t.string :microblogging
       t.string :description
 
       t.timestamps
