@@ -10,10 +10,16 @@ gem 'bootstrap-will_paginate', '0.0.5'
 gem 'paperclip', '~> 3.0'
 
 group :development do
+  gem 'sqlite3'
   gem 'rspec-rails', '2.8.1'
   gem 'guard-rspec', '0.5.5'
   gem 'annotate', '~>2.4.1.beta'
 end
+
+group :production do
+  gem 'pg'
+end
+
 
 # Gems used only for assets and not required
 # in production environments by default.
