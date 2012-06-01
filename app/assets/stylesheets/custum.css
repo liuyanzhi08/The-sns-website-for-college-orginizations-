@@ -2,6 +2,10 @@
 *{
 }
 
+img{
+  border:none;
+}
+
 input{
   border:1px solid #CCC;
   padding:5px;
