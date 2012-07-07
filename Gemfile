@@ -1,6 +1,6 @@
 source 'http://ruby.taobao.org/'
 
-gem 'rails', '3.2.1'
+gem 'rails', '3.2.6'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'bootstrap-sass', '2.0.0'
 gem 'faker', '1.0.1'
@@ -9,15 +9,12 @@ gem 'bootstrap-will_paginate', '0.0.5'
 gem 'paperclip', '~> 3.0'
 
 group :development do
-  gem 'sqlite3'
   gem 'rspec-rails', '2.8.1'
   gem 'guard-rspec', '0.5.5'
   gem 'annotate', '~>2.4.1.beta'
 end
 
-group :production do
-  gem 'pg'
-end
+gem 'pg'
 
 
 # Gems used only for assets and not required

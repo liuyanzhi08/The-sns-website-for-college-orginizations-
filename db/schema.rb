@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120529042132) do
+ActiveRecord::Schema.define(:version => 20120529035543) do
 
   create_table "activities", :force => true do |t|
     t.string   "name"
@@ -26,18 +26,19 @@ ActiveRecord::Schema.define(:version => 20120529042132) do
     t.string   "name"
     t.string   "price"
     t.string   "description"
-    t.integer  "society_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "society_id"
   end
 
   create_table "societies", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
     t.string   "description"
     t.integer  "properties_id"
     t.integer  "users_id"
+    t.string   "password"
     t.integer  "activities_id"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
@@ -52,9 +53,9 @@ ActiveRecord::Schema.define(:version => 20120529042132) do
     t.string   "email"
     t.string   "microblogging"
     t.string   "description"
-    t.integer  "society_id"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
+    t.integer  "society_id"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
